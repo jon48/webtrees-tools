@@ -1,0 +1,14 @@
+{
+    "Webtrees": {
+        "PluginDescription"        : "Trigger scheduled tasks in webtrees",
+		"MenuSettings"			:	"Webtrees",
+		"WebtreesSettings"		:	"Webtrees Settings",
+		
+		"WebtreesRootUrl"		:	"Website Root URL",
+		"WebtreesRootUrlInlineHelp"	:	"Enter the root URL for the webtrees website on which administrative tasks should be triggered",
+		"WebtreesToken"		:	"Force Token",
+		"WebtreesTokenInlineHelp"		:	"Enter the generated token used to force the execution of the task",
+		"WebtreesTaskName"		:	"Task Name",
+		"WebtreesTaskNameInlineHelp"		:	"Enter the name of the task to execute"
+    }
+}

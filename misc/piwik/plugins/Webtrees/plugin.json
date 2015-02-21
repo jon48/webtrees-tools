@@ -1,17 +1,20 @@
 {
     "name": "Webtrees",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "description": "Trigger scheduled tasks in webtrees.",
-    "keywords": ["webtrees","tasks"],
+    "keywords": [
+        "webtrees",
+        "tasks"
+    ],
     "require": {
-        "piwik": ">=2.2.0",
+        "piwik": ">=2.11.0",
         "php": ">=5.3.0"
     },
-	"authors": [
+    "authors": [
         {
             "name": "Jonathan Jaubart",
             "email": "dev@jaubart.com",
-            "homepage": "http://www.jaubart.com/"
+            "homepage": "http:\/\/www.jaubart.com\/"
         }
     ]
 }

@@ -1,0 +1,17 @@
+{
+    "Webtrees": {
+        "PluginDescription"        	: 	"Déclenche les tâches planifiées de webtrees",		
+		"WebtreesRootUrl"			:	"Adresse racine du site",
+		"WebtreesRootUrlDescr"		:	"Adresse racine du site webtrees",
+		"WebtreesRootUrlInlineHelp"	:	"Entrer l'adresse racine du site webtrees hébergeant les tâches planifiées à exécuter. La valeur doit être une adresse valide.",
+		"WebtreesRootUrlError" 		: 	"L'adresse racine du site n'est pas valide.",
+		"WebtreesToken"				:	"Jeton d'exécution",
+		"WebtreesTokenDescr"		:	"Jeton pour forcer l'exécution de la tâche",
+		"WebtreesTokenInlineHelp"	:	"Entrer le jeton utilisé pour forcer l'exécution des tâches. Ce jeton est généré dans la console d'administration des tâches de webtrees.",
+		"WebtreesTokenError" 		: 	"La valeur du jeton n'est pas valide.",
+		"WebtreesTaskName"			:	"Tâche à exécuter",
+		"WebtreesTaskNameDescr"		:	"Nom de la tâche à exécuter",
+		"WebtreesTaskNameInlineHelp":	"Entrer le nom de la tâche à exécuter. Le nom de la tâche doit exister dans le site webtrees.",
+		"WebtreesTaskNameError" 	: 	"Le nom de la tâche n'est pas valide."
+    }
+}

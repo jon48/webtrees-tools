@@ -1,14 +1,17 @@
 {
     "Webtrees": {
-        "PluginDescription"        : "Trigger scheduled tasks in webtrees",
-		"MenuSettings"			:	"Webtrees",
-		"WebtreesSettings"		:	"Webtrees Settings",
-		
-		"WebtreesRootUrl"		:	"Website Root URL",
-		"WebtreesRootUrlInlineHelp"	:	"Enter the root URL for the webtrees website on which administrative tasks should be triggered",
-		"WebtreesToken"		:	"Force Token",
-		"WebtreesTokenInlineHelp"		:	"Enter the generated token used to force the execution of the task",
-		"WebtreesTaskName"		:	"Task Name",
-		"WebtreesTaskNameInlineHelp"		:	"Enter the name of the task to execute"
+        "PluginDescription"        	: 	"Trigger scheduled tasks in webtrees",		
+		"WebtreesRootUrl"			:	"Website Root URL",
+		"WebtreesRootUrlDescr"		:	"Root URL of the webtrees website",
+		"WebtreesRootUrlInlineHelp"	:	"Enter the root URL for the webtrees website on which administrative tasks should be triggered. Value must be a valid URL.",
+		"WebtreesRootUrlError" 		: 	"The webtrees root url must be a valid URL.",
+		"WebtreesToken"				:	"Force Token",
+		"WebtreesTokenDescr"		:	"Token to force execution of the task",
+		"WebtreesTokenInlineHelp"	:	"Enter the generated token used to force the execution of the task. It is generated within the webtrees tasks adiministration panel.",
+		"WebtreesTokenError" 		: 	"The token is not valid.",
+		"WebtreesTaskName"			:	"Task Name",
+		"WebtreesTaskNameDescr"		:	"Name of the task to execute",
+		"WebtreesTaskNameInlineHelp":	"Enter the name of the task to execute. The task name must exist in the webtrees site.",
+		"WebtreesTaskNameError" 	: 	"The task name is not valid."
     }
 }

@@ -1,0 +1,32 @@
+{
+    "name": "jon48/webtrees-tools",
+    "description": "Technical tools for webtrees",
+    "type": "library",
+    "keyword": [
+        "webtrees", "genealogy", "piwik", "mantisbt"
+    ],
+    "homepage": "https://github.com/jon48/webtrees-tools",
+    "licence": "GPL-3.0+",
+    "author": [{
+        "name": "Jonathan Jaubart",
+        "email": "dev@jaubart.com",
+        "homepage": "http://www.jaubart.com",
+        "role": "Developer"
+    }],
+    "support": {
+        "issues": "http://bugs.jaubart.com"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "gettext/gettext": "*",
+        "fisharebest/localization": "*",
+        "fisharebest/webtrees": "*",
+        "jon48/webtrees-lib": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyArtJaub\\Webtrees\\Tools\\": "src/app/Webtrees/Tools"
+        }
+    }
+}
+        

@@ -8,6 +8,8 @@
  */
 namespace Piwik\Plugins\Webtrees;
 
+use Piwik\Container\StaticContainer;
+
 class Tasks extends \Piwik\Plugin\Tasks
 {
 	/**
@@ -22,21 +24,21 @@ class Tasks extends \Piwik\Plugin\Tasks
 
     public function triggerWebtreesAdminTasks(){
     	
-    	$settings = new Settings();
+    	$settings = new SystemSettings();
     	
-    	$this->logger = \Piwik\Container\StaticContainer::get('Psr\Log\LoggerInterface');
+    	$this->logger = StaticContainer::get('Psr\Log\LoggerInterface');
     	
     	$this->logger->info('Webtrees Admin Task triggered');
     	$rooturl = $settings->getSetting('webtreesRootUrl');
     	if(!$rooturl || strlen($rooturl->getValue()) === 0) return;
     	
     	$token = $settings->getSetting('webtreesToken');;
-    	if(!$token || strlen($token->getValue()) ===0 ) return;
+    	if(!$token || strlen($token->getValue()) === 0 ) return;
     	
     	$taskname = $settings->getSetting('webtreesTaskName');;
     	if(!$taskname || strlen($taskname->getValue()) === 0) return;
 
-    	$url = sprintf('%1$s/module.php?mod=perso_admintasks&mod_action=trigger&force=%2$s&task=%3$s',
+    	$url = sprintf('%1$s/module.php?mod=myartjaub_admintasks&mod_action=Task@trigger&force=%2$s&task=%3$s',
     			$rooturl->getValue(),
     			$token->getValue(),
     			$taskname->getValue()
@@ -45,6 +47,8 @@ class Tasks extends \Piwik\Plugin\Tasks
     	 
     	try {
     		\Piwik\Http::sendHttpRequest($url, Webtrees::SOCKET_TIMEOUT);
-    	} catch (Exception $e) { $this->logger->warning('an error occured', array('exception' => $e)); }
+    	} catch (\Exception $e) { 
+    	    $this->logger->warning('an error occured', array('exception' => $e)); 
+    	}
     }
 }

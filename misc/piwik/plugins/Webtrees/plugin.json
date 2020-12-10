@@ -1,13 +1,13 @@
 {
     "name": "Webtrees",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Trigger scheduled tasks in webtrees.",
     "keywords": [
         "webtrees",
         "tasks"
     ],
     "require": {
-        "piwik": ">=3.0.0-stable,<4.0.0"
+        "piwik": ">=3.0.0-stable,<5.0.0"
     },
     "authors": [
         {

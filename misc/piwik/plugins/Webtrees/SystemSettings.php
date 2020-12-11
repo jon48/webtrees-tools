@@ -22,6 +22,12 @@ use Piwik\Settings\Setting;
  */
 class SystemSettings extends \Piwik\Settings\Plugin\SystemSettings
 {
+    const WEBTREES_V1 = 1;
+    const WEBTREES_V2 = 2;
+    
+    /** @var Setting */
+    public $webtreesVersion;
+    
     /** @var Setting */
     public $webtreesRootUrl;
     
@@ -33,9 +39,29 @@ class SystemSettings extends \Piwik\Settings\Plugin\SystemSettings
     
     protected function init()
     {
+        $this->webctreesVersion = $this->createWebtreesVersion();
         $this->webtreesRootUrl = $this->createWebtreesRootUrlSetting();
         $this->webtreesToken = $this->createWebtreesTokenSetting();
         $this->webtreesTaskName = $this->createWebtreesTaskNameSetting();
+    }
+    
+    private function createWebtreesVersion() 
+    {
+        return $this->makeSetting('webtreesVersion', '', FieldConfig::TYPE_INT, function(FieldConfig $field) {
+            $field->title = $this->t('WebtreesVersion');
+            $field->description = $this->t('WebtreesVersionDescr');
+            $field->uiControl = FieldConfig::UI_CONTROL_RADIO;
+            $field->inlineHelp = $this->t('WebtreesVersionInlineHelp');
+            $field->availableValues = array(
+                self::WEBTREES_V1 => $this->t('WebtreesVersionV1'),
+                self::WEBTREES_V2 => $this->t('WebtreesVersionV2')
+            ); 
+            $field->validate = function($value, Setting $setting) {
+                if (!in_array($value, array(self::WEBTREES_V1, self::WEBTREES_V2))) {
+                    throw new \Exception($this->t('WebtreesVersionError'));
+                }
+            };
+        });
     }
     
     private function createWebtreesRootUrlSetting()

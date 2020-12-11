@@ -29,6 +29,7 @@ class Tasks extends \Piwik\Plugin\Tasks
     	$this->logger = StaticContainer::get('Psr\Log\LoggerInterface');
     	
     	$this->logger->info('Webtrees Admin Task triggered');
+    	
     	$rooturl = $settings->getSetting('webtreesRootUrl');
     	if(!$rooturl || strlen($rooturl->getValue()) === 0) return;
     	
@@ -38,11 +39,21 @@ class Tasks extends \Piwik\Plugin\Tasks
     	$taskname = $settings->getSetting('webtreesTaskName');;
     	if(!$taskname || strlen($taskname->getValue()) === 0) return;
 
-    	$url = sprintf('%1$s/module.php?mod=myartjaub_admintasks&mod_action=Task@trigger&force=%2$s&task=%3$s',
-    			$rooturl->getValue(),
-    			$token->getValue(),
-    			$taskname->getValue()
-		);
+    	$version = $settings->getSetting('webtreesVersion');
+    	if($version === null) return;
+    	if($version->getValue() === SystemSettings::WEBTREES_V1) {
+    	    $url = '%1$s/module.php?mod=myartjaub_admintasks&mod_action=Task@trigger&force=%2$s&task=%3$s';
+    	}
+    	else if($version->getValue() === SystemSettings::WEBTREES_V2) {
+    	    $url = '%1$s/module-maj/admintasks/trigger/%3$s?force=%2$s';
+    	}
+    	else return;
+    	
+    	$url = sprintf($url,
+    	    rtrim($rooturl->getValue(), '/'),
+    	    $token->getValue(),
+    	    $taskname->getValue()
+    	    );
     	$this->logger->info('webtrees url : {url}', array('url' => $url));
     	 
     	try {

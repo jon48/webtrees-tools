@@ -1,7 +1,13 @@
 {
     "Webtrees": {
-        "PluginDescription"        	: 	"Trigger scheduled tasks in webtrees",		
-		"WebtreesRootUrl"			:	"Website Root URL",
+        "PluginDescription"        	: 	"Trigger scheduled tasks in webtrees",
+        "WebtreesVersion"           :   "Webtrees Version",
+        "WebtreesVersionDescr"      :   "Version installed on the webtrees website",
+        "WebtreesVersionInlineHelp" :   "Choose the version of webtrees currently installed.",
+        "WebtreesVersionError"      :   "The webtrees version is invalid.",
+		"WebtreesVersionV1"         :   "Version 1.x",
+        "WebtreesVersionV2"         :   "Version 2.x and later",
+        "WebtreesRootUrl"           :   "Website Root URL",
 		"WebtreesRootUrlDescr"		:	"Root URL of the webtrees website",
 		"WebtreesRootUrlInlineHelp"	:	"Enter the root URL for the webtrees website on which administrative tasks should be triggered. Value must be a valid URL.",
 		"WebtreesRootUrlError" 		: 	"The webtrees root url must be a valid URL.",

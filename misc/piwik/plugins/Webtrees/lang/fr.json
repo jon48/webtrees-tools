@@ -1,7 +1,13 @@
 {
     "Webtrees": {
-        "PluginDescription"        	: 	"Déclenche les tâches planifiées de webtrees",		
-		"WebtreesRootUrl"			:	"Adresse racine du site",
+        "PluginDescription"        	: 	"Déclenche les tâches planifiées de webtrees",
+        "WebtreesVersion"           :   "Version de Webtrees",
+        "WebtreesVersionDescr"      :   "Version installée sur le site webtrees",
+        "WebtreesVersionInlineHelp" :   "Choisir la version de webtrees installée.",
+        "WebtreesVersionError"      :   "La version de webtrees est invalide.",
+        "WebtreesVersionV1"         :   "Version 1.x",
+        "WebtreesVersionV2"         :   "Version 2.x ou ultérieure",
+        "WebtreesRootUrl"			:	"Adresse racine du site",
 		"WebtreesRootUrlDescr"		:	"Adresse racine du site webtrees",
 		"WebtreesRootUrlInlineHelp"	:	"Entrer l'adresse racine du site webtrees hébergeant les tâches planifiées à exécuter. La valeur doit être une adresse valide.",
 		"WebtreesRootUrlError" 		: 	"L'adresse racine du site n'est pas valide.",

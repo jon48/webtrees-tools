@@ -21,7 +21,7 @@
         "gettext/gettext": "*",
         "fisharebest/localization": "*",
         "fisharebest/webtrees": "*",
-        "jon48/webtrees-lib": "dev-master"
+        "jon48/webtrees-lib": "dev-main-1.7"
     },
     "autoload": {
         "psr-4": {
